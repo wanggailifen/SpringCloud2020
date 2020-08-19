@@ -27,7 +27,7 @@ public class PaymentController {
         log.info("插入结果" + result);
 
         if (result > 0) {
-            return new CommonResult(200, "插入数据成功", result);
+            return new CommonResult(200, "插入数据成功了", result);
         }
         return new CommonResult(444, "插入数据失败", null);
     }
