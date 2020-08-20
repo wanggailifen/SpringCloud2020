@@ -1,4 +1,4 @@
-package com.atguigu.springcloud.api;
+package com.atguigu.springcloud;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

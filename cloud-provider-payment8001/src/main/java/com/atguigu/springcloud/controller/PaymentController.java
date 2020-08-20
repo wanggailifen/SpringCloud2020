@@ -1,6 +1,7 @@
 package com.atguigu.springcloud.controller;
 
-import com.atguigu.springcloud.api.CommonResult;
+import com.atguigu.springcloud.CommonResult;
+
 import com.atguigu.springcloud.entity.Payment;
 import com.atguigu.springcloud.service.IPaymentService;
 import lombok.extern.slf4j.Slf4j;
@@ -21,7 +22,7 @@ public class PaymentController {
     private IPaymentService paymentService;
 
     @PostMapping("/create")
-    public CommonResult create(Payment payment) {
+    public CommonResult create(@RequestBody Payment payment) {
 
         int result = paymentService.create(payment);
         log.info("插入结果" + result);

@@ -1,6 +1,7 @@
 package com.atguigu.springcloud.controller;
 
-import com.atguigu.springcloud.api.CommonResult;
+import com.atguigu.springcloud.CommonResult;
+
 import com.atguigu.springcloud.entity.Payment;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +29,7 @@ public class OrderController {
     }
     @GetMapping("/get/{id}")
     public CommonResult<Payment> getpayment(@PathVariable Long id) {
-        CommonResult result = restTemplate.getForObject(PAYMENT_URL + "/payment/get" + id, CommonResult.class);
+        CommonResult result = restTemplate.getForObject(PAYMENT_URL + "/payment/get/" + id, CommonResult.class);
         return result;
     }
 }
