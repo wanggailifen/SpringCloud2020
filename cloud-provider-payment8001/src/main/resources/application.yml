@@ -18,6 +18,9 @@ mybatis:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 
 eureka:
+  instance:
+    instance-id: payment8001
+    prefer-ip-address: true
   client:
     register-with-eureka: true
     fetchRegistry: true
