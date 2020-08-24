@@ -11,6 +11,7 @@ import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @program: cloud2020
@@ -68,4 +69,15 @@ public class PaymentController {
         }
         return new CommonResult(444, "没有对应记录，ID：" + id, null);
     }
+
+    @GetMapping(value = "/feign/timeout")
+    public String paymentFeignTimeout() {
+        try {
+            TimeUnit.SECONDS.sleep(3);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return serverPort;
+    }
+
 }
