@@ -1,0 +1,10 @@
+spring:
+  profiles:
+    active: dev
+#    active: test
+#    active: info
+
+
+
+#dataID: nacos-config-client-test.yaml
+
