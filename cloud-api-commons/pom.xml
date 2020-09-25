@@ -32,12 +32,12 @@
             <artifactId>hutool-all</artifactId>
             <version>5.1.0</version>
         </dependency>
-
-        <!--服务链路监控(包含sleuth、zipkin)-->
+<!--
+        &lt;!&ndash;服务链路监控(包含sleuth、zipkin)&ndash;&gt;
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-zipkin</artifactId>
-        </dependency>
+        </dependency>-->
     </dependencies>
 
 </project>
